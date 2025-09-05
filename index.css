@@ -383,3 +383,54 @@ nav ul li a:hover {
         gap: 12px;
     }
 }
+
+/* =========================
+   REUSABLE UTILITY CLASSES
+========================= */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #181f29;
+    border-radius: 14px;
+    box-shadow: 0 0 18px #00e0ff22;
+    padding: 24px 32px;
+    text-align: center;
+}
+
+.rounded {
+    border-radius: 14px;
+}
+
+.shadow {
+    box-shadow: 0 0 18px #00e0ff22;
+}
+
+.gradient-bg {
+    background: linear-gradient(90deg, #181f29 80%, #00e0ff22 100%);
+}
+
+.text-accent {
+    color: #00e0ff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.list-none {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* =========================
+   END UTILITY CLASSES
+========================= */

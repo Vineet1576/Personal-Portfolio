@@ -1,3 +1,37 @@
+/* Technologies Used Styling for Portfolio Theme */
+.technologies-used {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 18px 0 0 0;
+    padding: 10px 0;
+    background: linear-gradient(90deg, #181f29 80%, #00e0ff22 100%);
+    border-radius: 8px;
+    box-shadow: 0 2px 12px #00e0ff22;
+    font-size: 1rem;
+}
+
+.technologies-used span,
+.technologies-used li {
+    background: #222c37;
+    color: #00e0ff;
+    border-radius: 6px;
+    padding: 6px 14px;
+    margin: 0 4px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 1px 6px #00e0ff22;
+    transition: background 0.2s, color 0.2s;
+}
+
+.technologies-used span:hover,
+.technologies-used li:hover {
+    background: #00e0ff;
+    color: #181f29;
+}
+
 .project-img {
     width: 100%;
     max-width: 260px;
