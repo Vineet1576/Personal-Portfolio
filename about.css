@@ -121,6 +121,28 @@ body {
     margin-bottom: 8px;
 }
 
+/* Section container styles for About page */
+.about {
+    background: linear-gradient(120deg, #181f29 80%, #00e0ff22 100%);
+    border-radius: 18px;
+    box-shadow: 0 0 24px #00e0ff22, 0 2px 12px #181f29cc;
+    padding: 32px 28px;
+    margin-bottom: 32px;
+    transition: box-shadow 0.3s;
+}
+
+.about:hover {
+    box-shadow: 0 0 36px #00e0ff44, 0 4px 24px #181f29cc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .about, .projects, .education, .internship-certification, .hobbies {
+        padding: 18px 8px;
+        margin-bottom: 18px;
+    }
+}
+
 @media (max-width: 700px) {
     .about-content {
         flex-direction: column;
