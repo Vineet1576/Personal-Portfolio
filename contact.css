@@ -1,0 +1,102 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #12181f;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-container {
+    margin-top: 100px !important;
+    max-width: 1100px;
+    width: 100%;
+    /* set a height (or max-height) so the box can scroll */
+    max-height: 70vh;
+    /* adjust as needed (could be px or %) */
+    background: #1a222b;
+    border-radius: 20px;
+    box-shadow: 0 0 40px #00e0ff33;
+    padding: 40px 30px;
+
+    /* enable vertical scrolling */
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    /* enable smooth scrolling when programmatically scrolled or using wheel/trackpad */
+    scroll-behavior: smooth;
+}
+
+/* Hide scrollbar in WebKit (Chrome, Safari, newer Edge) */
+.contact-container::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+/* Hide scrollbar in Firefox while keeping scrolling */
+.contact-container {
+    scrollbar-width: thin;
+    /* options: auto, thin, none */
+    scrollbar-color: transparent transparent;
+}
+
+/* Hide scrollbar in IE/Edge (legacy) */
+.contact-container {
+    -ms-overflow-style: none;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: none;
+    background: #181f29;
+    color: #fff;
+    font-size: 1rem;
+    resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid #00e0ff;
+}
+
+.contact-form button {
+    background: #00e0ff;
+    color: #12181f;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 12px 0;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.contact-form button:hover {
+    background: #00b3cc;
+}
+
+.about-description {
+    margin-bottom: 18px;
+    line-height: 1.7;
+    padding-left: 20px;
+    /* Adjust as needed for bullet indentation */
+}
+
+@media (max-width: 700px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-container {
+        padding: 20px 8px;
+    }
+}

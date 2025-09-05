@@ -1,0 +1,133 @@
+/* Bouncing effect for the name span */
+.name {
+    display: inline-block;
+    animation: bounce 2.2s infinite;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #12181f;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.about-container {
+    margin-top: 100px !important;
+    max-width: 1100px;
+    /* set a height (or max-height) so the box can scroll */
+    max-height: 70vh;
+    /* adjust as needed (could be px or %) */
+    background: #1a222b;
+    border-radius: 20px;
+    box-shadow: 0 0 40px #00e0ff33;
+    padding: 40px 30px;
+
+    /* enable vertical scrolling */
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    /* enable smooth scrolling when programmatically scrolled or using wheel/trackpad */
+    scroll-behavior: smooth;
+}
+
+/* Hide scrollbar in WebKit (Chrome, Safari, newer Edge) */
+.about-container::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+/* Hide scrollbar in Firefox while keeping scrolling */
+.about-container {
+    scrollbar-width: thin;
+    /* options: auto, thin, none */
+    scrollbar-color: transparent transparent;
+}
+
+/* Hide scrollbar in IE/Edge (legacy) */
+.about-container {
+    -ms-overflow-style: none;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #00e0ff;
+    box-shadow: 0 0 20px #00e0ff99;
+    animation: bounce 2.2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0) scaleY(1);
+        animation-timing-function: ease-in;
+    }
+
+    20% {
+        transform: translateY(-25px) scaleY(0.85);
+        animation-timing-function: ease-out;
+    }
+
+    40% {
+        transform: translateY(-40px) scaleY(1.1);
+        animation-timing-function: ease-in;
+    }
+
+    60% {
+        transform: translateY(-25px) scaleY(0.9);
+        animation-timing-function: ease-out;
+    }
+
+    80% {
+        transform: translateY(-10px) scaleY(0.95);
+        animation-timing-function: ease-in;
+    }
+}
+
+/* Add this to about.css */
+.about-description {
+    margin-bottom: 18px;
+    line-height: 1.7;
+    padding-left: 20px;
+    /* Adjust as needed for bullet indentation */
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    color: #00e0ff;
+    margin-bottom: 10px;
+}
+
+.about-text ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+.about-text li {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 700px) {
+    .about-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-container {
+        padding: 20px 8px;
+    }
+}

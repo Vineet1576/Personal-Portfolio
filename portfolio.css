@@ -1,0 +1,160 @@
+.project-img {
+    width: 100%;
+    max-width: 260px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 0 auto 18px auto;
+    display: block;
+    box-shadow: 0 4px 18px #00e0ff22;
+    background: #181f29;
+    border: 2px solid #222;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.04) rotate(-1deg);
+    box-shadow: 0 8px 32px #00e0ff55;
+    border-color: #00e0ff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #12181f;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.portfolio-container {
+    margin-top: 100px !important;
+    max-width: 1100px;
+    /* set a height (or max-height) so the box can scroll */
+    max-height: 70vh;
+    /* adjust as needed (could be px or %) */
+    background: #1a222b;
+    border-radius: 20px;
+    box-shadow: 0 0 40px #00e0ff33;
+    padding: 40px 30px;
+
+    /* enable vertical scrolling */
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    /* enable smooth scrolling when programmatically scrolled or using wheel/trackpad */
+    scroll-behavior: smooth;
+}
+
+/* Hide scrollbar in WebKit (Chrome, Safari, newer Edge) */
+.portfolio-container::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+/* Hide scrollbar in Firefox while keeping scrolling */
+.portfolio-container {
+    scrollbar-width: thin;
+    /* options: auto, thin, none */
+    scrollbar-color: transparent transparent;
+}
+
+/* Hide scrollbar in IE/Edge (legacy) */
+.portfolio-container {
+    -ms-overflow-style: none;
+}
+
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.project-links-row {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    margin-top: 18px;
+    margin-bottom: 0;
+}
+
+.project-card {
+    background: #181f29;
+    border-radius: 14px;
+    box-shadow: 0 0 18px #00e0ff22;
+    padding: 24px 32px;
+    text-align: center;
+    flex: 1 1 300px;
+}
+
+.project-card h3 {
+    margin-bottom: 12px;
+    color: #00e0ff;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #00e0ff;
+    background: #181f29;
+    border: 2px solid #00e0ff;
+    border-radius: 8px;
+    padding: 8px 22px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: 0 2px 12px #00e0ff22;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, border 0.2s;
+    cursor: pointer;
+    gap: 8px;
+}
+
+.project-link::after {
+    content: '\2192';
+    /* right arrow */
+    font-size: 1.1em;
+    margin-left: 6px;
+    transition: margin-left 0.2s;
+}
+
+.project-link:hover,
+.project-link:focus {
+    background: #00e0ff;
+    color: #181f29;
+    border-color: #00e0ff;
+    box-shadow: 0 4px 24px #00e0ff55;
+}
+
+.project-link:hover::after,
+.project-link:focus::after {
+    margin-left: 14px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.about-description {
+    margin-bottom: 18px;
+    line-height: 1.7;
+    padding-left: 20px;
+    /* Adjust as needed for bullet indentation */
+}
+
+@media (max-width: 700px) {
+    .projects-list {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .portfolio-container {
+        padding: 20px 8px;
+    }
+}
