@@ -2,17 +2,16 @@
 // JS for interactive features across all portfolio pages
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Smooth scroll for navigation links
+    // Smooth scroll for navigation links (single page)
     document.querySelectorAll('nav ul li a').forEach(function (link) {
         link.addEventListener('click', function (e) {
             const href = link.getAttribute('href');
-            if (href && href[0] !== '#' && href.endsWith('.html')) {
-                // Allow default navigation
-                return;
-            }
             if (href && href.startsWith('#')) {
                 e.preventDefault();
-                document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+                const section = document.querySelector(href);
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
             }
         });
     });
