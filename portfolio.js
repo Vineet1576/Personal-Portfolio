@@ -54,3 +54,30 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+// Mobile nav toggle logic
+        const navToggle = document.getElementById('navToggle');
+        const mobileNav = document.getElementById('mobileNav');
+        let navOpen = false;
+        navToggle.addEventListener('click', function() {
+            navOpen = !navOpen;
+            if (navOpen) {
+                mobileNav.classList.remove('hidden');
+            } else {
+                mobileNav.classList.add('hidden');
+            }
+        });
+        // Hide mobile nav on resize to md and above
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768) {
+                mobileNav.classList.add('hidden');
+                navOpen = false;
+            }
+        });
+        // Optional: Hide mobile nav when clicking a link
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.add('hidden');
+                navOpen = false;
+            });
+        });

@@ -13,35 +13,102 @@
             background-color: #12181f;
         }
 
+        /* Improved Social Media Link Styles */
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            font-size: 1.5rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1a222b 60%, #22d3ee 100%);
+            color: #22d3ee;
+            box-shadow: 0 2px 8px rgba(34, 211, 238, 0.12);
+            transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.3s;
+            border: 2px solid #22d3ee;
+        }
+
+        .social-link:hover {
+            background: linear-gradient(135deg, #22d3ee 60%, #1a222b 100%);
+            color: #fff;
+            transform: translateY(-3px) scale(1.08);
+            box-shadow: 0 4px 16px rgba(34, 211, 238, 0.25);
+            border-color: #06b6d4;
+        }
+
         /* Custom image styling for the profile picture */
         .profile-img-container {
             /* Create a subtle, glowing shadow effect for visual interest */
             box-shadow: 0 0 20px rgba(52, 211, 255, 0.4);
         }
+
+        /* Custom vertical scrollbar for section on medium and small screens */
+        .custom-scrollbar {
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #22d3ee #1a222b;
+            max-height: 600px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 10px;
+            background: #1a222b;
+            border-radius: 8px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #22d3ee 0%, #0ea5e9 100%);
+            border-radius: 8px;
+            border: 2px solid #1a222b;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #06b6d4;
+        }
     </style>
 </head>
 
 <body class="min-h-screen">
-    <nav class="fixed top-0 left-0 right-0 flex justify-center z-50 transition-all py-4 md:py-6">
+    <nav class="fixed top-0 left-0 right-0 max-w-full mx-auto flex justify-center z-50 transition-all py-4 md:py-6 ">
         <div
             class="max-w-[1200px] w-[95%] mx-auto flex justify-between items-center font-semibold text-white bg-[#1a222b] bg-opacity-90 backdrop-blur-md rounded-full px-4 sm:px-8 py-3 shadow-2xl transition-all">
             <div class="font-extrabold text-xl sm:text-2xl select-none text-cyan-400">Vineet Rana.</div>
-            <ul class="hidden md:flex gap-6 lg:gap-10 items-center list-none text-sm lg:text-base">
-                <li><a href="index.html" class="hover:text-cyan-400 transition">Home</a></li>
-                <li><a href="about.html" class="hover:text-cyan-400 transition font-bold text-cyan-400">About</a></li>
-                <li><a href="skills.html" class="hover:text-cyan-400 transition">Skills</a></li>
-                <li><a href="portfolio.html" class="hover:text-cyan-400 transition">Portfolio</a></li>
-                <li><a href="contact.html" class="hover:text-cyan-400 transition">Contact</a></li>
+            <ul id="navLinks" class="hidden md:flex gap-6 lg:gap-10 items-center list-none text-sm lg:text-base">
+                <li><a href="index.html"
+                        class="hover:text-cyan-400 transition relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-cyan-400 hover:after:w-full after:transition-all">Home</a>
+                </li>
+                <li><a href="about.html"
+                        class="hover:text-cyan-400 transition relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-cyan-400 hover:after:w-full after:transition-all">About</a>
+                </li>
+                <li><a href="skills.html"
+                        class="hover:text-cyan-400 transition relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-cyan-400 hover:after:w-full after:transition-all">Skills</a>
+                </li>
+                <li><a href="portfolio.html"
+                        class="hover:text-cyan-400 transition relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-cyan-400 hover:after:w-full after:transition-all">Portfolio</a>
+                </li>
+                <li><a href="contact.html"
+                        class="hover:text-cyan-400 transition relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-cyan-400 hover:after:w-full after:transition-all">Contact</a>
+                </li>
             </ul>
-            <button class="md:hidden text-white text-2xl hover:text-cyan-400 transition"
+            <button id="navToggle" class="md:hidden text-white text-2xl hover:text-cyan-400 transition"
                 aria-label="Toggle Navigation Menu">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </nav>
-
-    <main class="pt-32 pb-16">
-        <div class="max-w-[1200px] w-[95%] mx-auto bg-[#1a222b] rounded-3xl shadow-2xl p-8 md:p-12 text-white">
+    <!-- Mobile Nav -->
+    <div id="mobileNav"
+        class="fixed top-20 left-0 w-full bg-[#1a222b] bg-opacity-95 backdrop-blur-md z-40 rounded-b-2xl shadow-2xl py-6 px-8 flex flex-col gap-6 text-white text-lg transition-all duration-300 hidden">
+        <a href="index.html" class="hover:text-cyan-400 transition">Home</a>
+        <a href="about.html" class="hover:text-cyan-400 transition">About</a>
+        <a href="skills.html" class="hover:text-cyan-400 transition">Skills</a>
+        <a href="portfolio.html" class="hover:text-cyan-400 transition">Portfolio</a>
+        <a href="contact.html" class="hover:text-cyan-400 transition">Contact</a>
+    </div>
+    <main class="pt-32 max-w-[1200px] w-[95%] mx-auto">
+        <section
+            class="custom-scrollbar max-w-[1200px] w-[95%] mx-auto bg-[#1a222b] rounded-[3rem] shadow-2xl p-8 md:p-12 text-white">
             <h1
                 class="text-3xl sm:text-4xl font-extrabold text-cyan-400 mb-10 text-center border-b-2 border-cyan-400/50 pb-4">
                 <i class="fas fa-user-circle mr-3"></i> About Me
@@ -62,17 +129,22 @@
                     <h2 class="text-3xl font-extrabold text-white">Hi, I'm Vineet Rana 👋</h2>
 
                     <section>
-                        <h3 class="section-heading"><i class="fas fa-bullseye mr-2"></i> Career Objective</h3>
-                        <p class="text-gray-300 leading-relaxed text-base">
-                            I am a motivated **software learner** who likes building real projects. I know the basics of
-                            coding and enjoy improving code, adding features, and testing to help users. I have learned
-                            C, C++, JavaScript, HTML, CSS, and the **MERN stack**. I built a full‑stack Recipe Finder
-                            Project. I am disciplined, quick to adapt, and work well on teams.
-                        </p>
+                        <h3 class="section-heading"><i class="fas fa-bullseye mr-2 mb-3"></i> Career Objective</h3>
+                        <div
+                            class="relative bg-[#181f29] p-8 rounded-xl border-l-4 border-cyan-400 shadow-2xl transition hover:shadow-cyan-400/20">
+                            <i class="fas fa-quote-left text-cyan-400 text-3xl absolute top-4 left-4 opacity-30"></i>
+                            <p class="text-gray-200 leading-relaxed text-base italic pl-8 pr-4"> I am a motivated
+                                <span class="font-bold text-cyan-400">software learner</span> who likes building real projects. I know the
+                                basics of coding and enjoy improving code, adding features, and testing to help users. I
+                                have learned <span class="font-bold text-cyan-400">C, C++, JavaScript, HTML, CSS, and the MERN stack</span>. I built a full‑stack
+                                Recipe Finder Project and many more projects. I am disciplined, quick to adapt, and work well on teams.
+                            </p>
+                            <i class="fas fa-quote-right text-cyan-400 text-3xl absolute bottom-4 right-4 opacity-30 hidden sm:block"></i>
+                        </div>
                     </section>
 
                     <section>
-                        <h3 class="section-heading"><i class="fas fa-laptop-code mr-2"></i> Featured Project</h3>
+                        <h3 class="section-heading"><i class="fas fa-laptop-code mr-2 mb-3"></i> Featured Project</h3>
                         <div class="bg-[#181f29] p-5 rounded-xl border-l-4 border-cyan-400 shadow-lg">
                             <h4 class="font-bold text-xl text-cyan-400 mb-3">Recipe Finder | Full-Stack Web Application
                                 (MERN)</h4>
@@ -86,21 +158,22 @@
                                 <li>Designed RESTful endpoints and managed user data with Mongoose.</li>
                                 <li>Ensured a responsive UI for both desktop and mobile views.</li>
                             </ul>
-                            <a href="portfolio.html"
+                            <a href="https://github.com/Vineet1576/Recipe-Finder" target="_blank"
                                 class="inline-block mt-4 text-cyan-400 hover:text-cyan-300 transition font-semibold text-sm">
-                                View Project Details <i class="fas fa-arrow-right ml-1"></i>
+                                View Project Code <i class="fas fa-arrow-right ml-1"></i>
                             </a>
                         </div>
                     </section>
 
                     <section>
-                        <h3 class="section-heading"><i class="fas fa-briefcase mr-2"></i> Internship Experience</h3>
-                        <div class="bg-[#181f29] p-5 rounded-xl border-l-4 border-gray-500 shadow-lg">
+                        <h3 class="section-heading"><i class="fas fa-briefcase mr-2 mb-3"></i> Internship Experience
+                        </h3>
+                        <div class="bg-[#181f29] p-5 rounded-xl border-l-4 border-cyan-400 shadow-lg">
                             <p class="text-white font-bold text-lg mb-1">MERN Stack Intern</p>
                             <p class="text-sm text-cyan-400 mb-3">Sensation Software Solutions Mohali</p>
                             <ul class="list-disc pl-5 text-gray-300 space-y-2 text-sm">
-                                <li>Developed and deployed responsive full-stack web applications using **MongoDB,
-                                    Express.js, and React.js**.</li>
+                                <li>Developed and deployed responsive full-stack web applications using <span class="font-bold text-cyan-400">MongoDB,
+                                    Express.js, and React.js</span>.</li>
                                 <li>Gained experience in **RESTful APIs**, frontend-backend integration, and database
                                     management.</li>
                                 <li>Collaborated in an agile team environment, enhancing skills in communication,
@@ -110,18 +183,22 @@
                     </section>
 
                     <section>
-                        <h3 class="section-heading"><i class="fas fa-graduation-cap mr-2"></i> Education</h3>
-                        <ul class="list-disc pl-5 text-gray-300 space-y-2 text-base">
-                            <li><span class="font-bold text-white">Maharaja Agrasen Institute of Management and
-                                    Technology</span> — Bachelor of Computer Applications 3rd Year</li>
-                            <li><span class="font-bold text-white">Government Senior Secondary School</span> — 12th</li>
-                            <li><span class="font-bold text-white">Surindera High School</span> — 10th</li>
-                        </ul>
+                        <h3 class="section-heading"><i class="fas fa-graduation-cap mr-2 mb-3"></i> Education</h3>
+                        <div class="bg-[#181f29] p-5 rounded-xl border-l-4 border-cyan-400 shadow-lg">
+                            <ul class="list-disc pl-5 text-gray-300 space-y-2 text-base">
+                                <li><span class="font-bold text-white">Maharaja Agrasen Institute of Management and
+                                        Technology</span> — Bachelor of Computer Applications 3rd Year</li>
+                                <li><span class="font-bold text-white">Government Senior Secondary School</span> — 12th
+                                </li>
+                                <li><span class="font-bold text-white">Surindera High School</span> — 10th</li>
+                            </ul>
+                        </div>
                     </section>
 
                     <section>
-                        <h3 class="section-heading"><i class="fas fa-heart mr-2"></i> Hobbies & Interests</h3>
-                        <div class="flex flex-wrap gap-4 text-gray-300">
+                        <h3 class="section-heading"><i class="fas fa-heart mr-2 mb-3"></i> Hobbies & Interests</h3>
+                        <div
+                            class="flex flex-wrap gap-4 text-gray-300 bg-[#181f29] p-5 rounded-xl border-l-4 border-cyan-400 shadow-lg">
                             <span class="hobby-tag">
                                 <i class="fas fa-code mr-2"></i> Coding Challenges
                             </span>
@@ -150,7 +227,7 @@
 
                 </div>
             </div>
-        </div>
+        </section>
     </main>
     <script src="portfolio.js"></script>
 </body>
