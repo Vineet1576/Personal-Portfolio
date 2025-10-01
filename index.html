@@ -5,58 +5,85 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portfolio - Vineet Rana</title>
-    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <style>
+        .gradient-bg {
+            /* A subtle radial gradient for depth and visual interest */
+            background: radial-gradient(circle at top left, #303f50 0%, #1a222b 60%, #1a222b 100%);
+        }
+        /* Custom animation for a more controlled pulse effect */
+        @keyframes subtle-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+        .animate-subtle-pulse {
+            animation: subtle-pulse 5s infinite ease-in-out;
+        }
+    </style>
 </head>
 
-<body>
-    <nav>
-        <div class="logo">Vineet Rana.</div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+<body class="bg-[#12181f] min-h-screen">
+    <nav class="fixed top-0 left-0 right-0 max-w-full mx-auto flex justify-center z-50 transition-all py-4 md:py-6 ">
+        <div class="max-w-[1200px] w-[95%] mx-auto flex justify-between items-center font-semibold text-white bg-[#1a222b] bg-opacity-90 backdrop-blur-md rounded-full px-4 sm:px-8 py-3 shadow-2xl transition-all">
+            <div class="font-extrabold text-xl sm:text-2xl select-none text-cyan-400">Vineet Rana.</div>
+            <ul class="hidden md:flex gap-6 lg:gap-10 items-center list-none text-sm lg:text-base">
+                <li><a href="index.html" class="hover:text-cyan-400 transition relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-cyan-400 hover:after:w-full after:transition-all">Home</a></li>
+                <li><a href="about.html" class="hover:text-cyan-400 transition relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-cyan-400 hover:after:w-full after:transition-all">About</a></li>
+                <li><a href="skills.html" class="hover:text-cyan-400 transition relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-cyan-400 hover:after:w-full after:transition-all">Skills</a></li>
+                <li><a href="portfolio.html" class="hover:text-cyan-400 transition relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-cyan-400 hover:after:w-full after:transition-all">Portfolio</a></li>
+                <li><a href="contact.html" class="hover:text-cyan-400 transition relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-cyan-400 hover:after:w-full after:transition-all">Contact</a></li>
+            </ul>
+            <button class="md:hidden text-white text-2xl hover:text-cyan-400 transition" aria-label="Toggle Navigation Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
     </nav>
 
-    <div class="container card shadow gradient-bg">
-        <div class="left-content">
-            <h3 class="text-accent">Hello, It's Me</h3>
-            <h1 class="text-accent">Vineet Rana</h1>
-            <p class="text-center">"I am a motivated software learner who likes building real projects. I know the
-                basics of coding and enjoy improving code, adding features, and testing to help users. I have learned
-                C, C++, JavaScript, HTML, CSS, and the MERN stack. I built a full‑stack Recipe Finder Project. I am
-                disciplined, quick to adapt, and work well on teams."</p>
-            <div class="social-icons flex-center" aria-label="Social media links">
-                <a href="https://github.com/Vineet1576" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-github"></i>
-                    <span class="custom-tooltip">GitHub</span>
-                </a>
-                <a href="https://linkedin.com/in/vineetrana092005" aria-label="LinkedIn" target="_blank"
-                    rel="noopener noreferrer">
-                    <i class="fab fa-linkedin-in"></i>
-                    <span class="custom-tooltip">LinkedIn</span>
-                </a>
+    <main class="pt-32 pb-16 max-w-[1200px] w-[95%] mx-auto">
+        <section class="flex flex-col-reverse lg:flex-row justify-between items-center bg-[#1a222b] rounded-[3rem] shadow-2xl p-8 md:p-16 gap-12 gradient-bg text-white">
+            
+            <div class="flex flex-col gap-5 lg:gap-6 flex-1 max-w-full lg:max-w-[50%] text-center lg:text-left">
+                <h3 class="font-medium text-lg md:text-xl tracking-wider text-cyan-400 animate-fadeInUp">Hello, It's Me 👋</h3>
+                <h1 class="font-extrabold text-4xl sm:text-5xl md:text-6xl text-white leading-tight">
+                    <span class="block text-cyan-400">Vineet Rana</span>
+                    <span class="block text-3xl sm:text-4xl md:text-5xl mt-2 text-gray-200">Software Learner</span>
+                </h1>
+                
+                <p class="text-gray-300 text-base md:text-lg mt-2 mb-4 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                    "I am a motivated **software learner** who likes building real projects. I know the basics of coding and enjoy improving code, adding features, and testing to help users. I have learned C, C++, JavaScript, HTML, CSS, and the **MERN stack**. I built a full-stack Recipe Finder Project. I am disciplined, quick to adapt, and work well on teams."
+                </p>
+
+                <div class="flex gap-4 sm:gap-5 justify-center lg:justify-start mb-6" aria-label="Social media links">
+                    <a href="https://github.com/Vineet1576" aria-label="GitHub" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/vineetrana092005" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+
+                <div class="flex gap-4 mt-2 flex-wrap justify-center lg:justify-start">
+                    <a href="/contact.html" class="action-btn-primary" aria-label="Contact Me">
+                        <i class="fas fa-envelope mr-2"></i> Contact Me
+                    </a>
+                    <a href="/Vineet Rana Resume.pdf" class="action-btn-secondary" download aria-label="Download CV">
+                        <i class="fas fa-file-arrow-down mr-2"></i> Download CV
+                    </a>
+                </div>
             </div>
-            <div class="button-group flex-center">
-                <a href="/contact.html" class="btn-download" aria-label="Contact Me">
-                    <i class="fas fa-envelope"></i> Contact Me
-                </a>
-                <a href="/Vineet Rana Resume.pdf" class="btn-download" download aria-label="Download CV">
-                    <i class="fas fa-file-arrow-down"></i> Download CV
-                </a>
+
+            <div class="flex-shrink-0 w-full max-w-[300px] sm:max-w-[350px] lg:max-w-[400px] flex items-center justify-center lg:justify-end">
+                <div class="w-full h-auto aspect-square rounded-full overflow-hidden shadow-[0_0_50px_rgba(52,211,255,0.7)] border-4 border-cyan-400 transition animate-subtle-pulse">
+                    <img src="images/vineet-rana.jpg"
+                        alt="Professional portrait of Vineet Rana, a young man wearing a suit jacket, with a subtle blue neon glow background."
+                        onerror="this.style.display='none'" class="w-full h-full object-cover block transition duration-500 hover:scale-105" />
+                </div>
             </div>
-        </div>
-        <div class="right-content flex-center" aria-label="Photo of John Kendric">
-            <div class="circular-image" role="img" aria-roledescription="Hexagon shaped profile photo with neon glow">
-                <img src="images/vineet-rana.jpg"
-                    alt="Professional portrait photo of a young man with short hair, neatly groomed beard, wearing a black suit jacket, hand near the chin, dark background with blue neon hexagon shaped glow behind"
-                    onerror="this.style.display='none'" />
-            </div>
-        </div>
-    </div>
+
+        </section>
+    </main>
+
     <script src="portfolio.js"></script>
 </body>
 

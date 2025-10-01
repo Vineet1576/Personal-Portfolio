@@ -4,127 +4,176 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portfolio - Vineet Rana</title>
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="skills.css" />
+    <title>Skills - Vineet Rana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <style>
+        /* Define the primary background */
+        body {
+            background-color: #12181f;
+        }
+
+        /* Custom progress bar fill colors (example, you'd integrate this with your progress logic) */
+        .progress-bar-fill {
+            height: 100%;
+            background-color: #06b6d4;
+            /* cyan-500 */
+            border-radius: 9999px;
+            transition: width 1s ease-out;
+        }
+    </style>
 </head>
 
-<body>
-    <nav>
-        <div class="logo">Vineet Rana.</div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li class="active"><a href="skills.html">Skills</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+<body class="min-h-screen">
+    <nav class="fixed top-0 left-0 right-0 flex justify-center z-50 transition-all py-4 md:py-6">
+        <div
+            class="max-w-[1200px] w-[95%] mx-auto flex justify-between items-center font-semibold text-white bg-[#1a222b] bg-opacity-90 backdrop-blur-md rounded-full px-4 sm:px-8 py-3 shadow-2xl transition-all">
+            <div class="font-extrabold text-xl sm:text-2xl select-none text-cyan-400">Vineet Rana.</div>
+            <ul class="hidden md:flex gap-6 lg:gap-10 items-center list-none text-sm lg:text-base">
+                <li><a href="index.html" class="hover:text-cyan-400 transition">Home</a></li>
+                <li><a href="about.html" class="hover:text-cyan-400 transition">About</a></li>
+                <li><a href="skills.html" class="hover:text-cyan-400 transition font-bold text-cyan-400">Skills</a></li>
+                <li><a href="portfolio.html" class="hover:text-cyan-400 transition">Portfolio</a></li>
+                <li><a href="contact.html" class="hover:text-cyan-400 transition">Contact</a></li>
+            </ul>
+            <button class="md:hidden text-white text-2xl hover:text-cyan-400 transition"
+                aria-label="Toggle Navigation Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
     </nav>
-    <div class="skills-container">
-        <h1>My Skills</h1>
-        <div class="skills-list">
-            <div class="skill-card">
-                <h3>C</h3>
-                <div class="bar html"></div>
-                <p style="margin-bottom: 14px; line-height: 1.7;">
-                    Procedural programming, memory management, pointers, data structures (arrays, linked lists, stack,
-                    queues),
-                    and efficient algorithm implementation.
-                </p>
+
+    <main class="pt-32 pb-16">
+        <div class="max-w-[1200px] w-[95%] mx-auto bg-[#1a222b] rounded-3xl shadow-2xl p-8 md:p-12 text-white">
+            <h1
+                class="text-3xl sm:text-4xl font-extrabold text-cyan-400 mb-10 text-center border-b-2 border-cyan-400/50 pb-4">
+                <i class="fas fa-tools mr-3"></i> My Technical Skills
+            </h1>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-16">
+
+                <div class="skill-card">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-2">C</h3>
+                    <div class="h-3 w-full bg-[#222c37] rounded-full mb-3 shadow-inner overflow-hidden">
+                        <div class="progress-bar-fill" style="width: 85%;"></div>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed">Procedural programming, memory management,
+                        pointers, data structures (arrays, linked lists), and efficient algorithm implementation.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-2">C++</h3>
+                    <div class="h-3 w-full bg-[#222c37] rounded-full mb-3 shadow-inner overflow-hidden">
+                        <div class="progress-bar-fill" style="width: 75%;"></div>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed">Object-oriented design (OOP), standard template
+                        library (STL), and performance-focused low-level optimization.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-2">Python</h3>
+                    <div class="h-3 w-full bg-[#222c37] rounded-full mb-3 shadow-inner overflow-hidden">
+                        <div class="progress-bar-fill" style="width: 60%;"></div>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed">Data analysis with pandas and NumPy, web
+                        development with Flask, and scripting for automation.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-2">HTML5</h3>
+                    <div class="h-3 w-full bg-[#222c37] rounded-full mb-3 shadow-inner overflow-hidden">
+                        <div class="progress-bar-fill" style="width: 95%;"></div>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed">Semantic tags, accessibility best practices (ARIA),
+                        responsive structure, forms and validation, and SEO-friendly document structure.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-2">CSS3 / Tailwind</h3>
+                    <div class="h-3 w-full bg-[#222c37] rounded-full mb-3 shadow-inner overflow-hidden">
+                        <div class="progress-bar-fill" style="width: 90%;"></div>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed">Responsive layouts with Flexbox/Grid, utility-first
+                        styling with **Tailwind CSS**, animations, and custom properties.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-2">JavaScript</h3>
+                    <div class="h-3 w-full bg-[#222c37] rounded-full mb-3 shadow-inner overflow-hidden">
+                        <div class="progress-bar-fill" style="width: 80%;"></div>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed">Modern ES6+ features, asynchronous programming
+                        (Promises, async/await), DOM manipulation, event-driven code, and API interaction.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-2">React</h3>
+                    <div class="h-3 w-full bg-[#222c37] rounded-full mb-3 shadow-inner overflow-hidden">
+                        <div class="progress-bar-fill" style="width: 70%;"></div>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed">Component-based architecture, hooks (useState,
+                        useEffect), state and props management, routing, and building reusable UI components.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-2">VS Code</h3>
+                    <div class="h-3 w-full bg-[#222c37] rounded-full mb-3 shadow-inner overflow-hidden">
+                        <div class="progress-bar-fill" style="width: 90%;"></div>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed">Editor customization, essential extensions,
+                        integrated debugger, and efficient Git integration for faster development.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-2">Git & GitHub</h3>
+                    <div class="h-3 w-full bg-[#222c37] rounded-full mb-3 shadow-inner overflow-hidden">
+                        <div class="progress-bar-fill" style="width: 85%;"></div>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed">Branching/merging workflows, pull requests and code
+                        reviews, commit best practices, and collaborative version control.</p>
+                </div>
             </div>
-            <div class="skill-card">
-                <h3>C++</h3>
-                <div class="bar html"></div>
-                <p style="margin-bottom: 14px; line-height: 1.7;">
-                    Object-oriented design, and
-                    performance-focused low-level optimization.
-                </p>
-            </div>
-            <div class="skill-card">
-                <h3>Python</h3>
-                <div class="bar html"></div>
-                <p style="margin-bottom: 14px; line-height: 1.7;">
-                    Data analysis with pandas and NumPy, web development with Flask, and scripting for automation.
-                </p>
-            </div>
-            <div class="skill-card">
-                <h3>HTML5</h3>
-                <div class="bar html"></div>
-                <p style="margin-bottom: 14px; line-height: 1.7;">
-                    Semantic tags, accessibility best practices (ARIA), responsive structure, forms and validation,
-                    and SEO-friendly document structure.
-                </p>
-            </div>
-            <div class="skill-card">
-                <h3>CSS3</h3>
-                <div class="bar css"></div>
-                <p style="margin-bottom: 14px; line-height: 1.7;">
-                    Responsive layouts with Flexbox and Grid, animations and transitions, and custom properties.
-                </p>
-            </div>
-            <div class="skill-card">
-                <h3>JavaScript</h3>
-                <div class="bar js"></div>
-                <p style="margin-bottom: 14px; line-height: 1.7;">
-                    Modern ES6+ features, asynchronous programming (Promises, async/await), DOM manipulation,
-                    event-driven code, and API interaction via axios.
-                </p>
-            </div>
-            <div class="skill-card">
-                <h3>React</h3>
-                <div class="bar react"></div>
-                <p style="margin-bottom: 14px; line-height: 1.7;">
-                    Component-based architecture, hooks (useState, useEffect), state and props management, routing, and
-                    building reusable UI components.
-                </p>
-            </div>
-            <div class="skill-card">
-                <h3>VS Code</h3>
-                <div class="bar vscode"></div>
-                <p style="margin-bottom: 14px; line-height: 1.7;">
-                    Editor customization, essential extensions, integrated debugger, Git integration, and productivity
-                    shortcuts for faster development.
-                </p>
-            </div>
-            <div class="skill-card">
-                <h3>Git & GitHub</h3>
-                <div class="bar git"></div>
-                <p style="margin-bottom: 14px; line-height: 1.7;">
-                    Branching and merging workflows, pull requests and code reviews, commit best practices, and
-                    collaborative version control with remotes.
-                </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+
+                <div>
+                    <h2 class="text-2xl font-bold text-white mb-6 border-b border-cyan-400/30 pb-2">
+                        <i class="fas fa-laptop-code mr-2 text-cyan-400"></i> Other Tools & Exposure
+                    </h2>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="tool-tag">REST APIs</span>
+                        <span class="tool-tag">MySQL</span>
+                        <span class="tool-tag">Bootstrap</span>
+                        <span class="tool-tag">Node.js / Express (Basics)</span>
+                        <span class="tool-tag">MS Office</span>
+                        <span class="tool-tag">Power BI</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-white mb-6 border-b border-cyan-400/30 pb-2">
+                        <i class="fas fa-award mr-2 text-cyan-400"></i> Certifications
+                    </h2>
+                    <ul class="space-y-4">
+                        <li class="cert-item">
+                            <a href="https://www.mygreatlearning.com/certificate/AZKVLYKY" target="_blank"
+                                rel="noopener noreferrer" class="cert-link">
+                                Excel Expert
+                                <span class="cert-issuer">Great Learning Academy</span>
+                            </a>
+                        </li>
+                        <li class="cert-item">
+                            <a href="/images/MERN Stack Certificate.jpg" target="_blank" rel="noopener noreferrer"
+                                class="cert-link">
+                                MERN Stack
+                                <span class="cert-issuer">Sensation Software Solutions</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="skills-extra">
-            <h3>Other Tools</h3>
-            <ul>
-                <li>REST APIs</li>
-                <li>MySQL</li>
-                <li>Bootstrap</li>
-                <li>MS Office</li>
-                <li>Power BI</li>
-                <li>Node js / Express js (Basics)</li>
-            </ul>
-        </div>
-        <div class="skills-certifications">
-            <h3>Certifications</h3>
-            <ul>
-                <a href="https://www.mygreatlearning.com/certificate/AZKVLYKY" target="_blank"
-                    rel="noopener noreferrer">
-                    <li>Excel Expert - <span
-                            style="background: linear-gradient(90deg, #4caf50, #81c784); padding: 5px 10px; border-radius: 5px; color: white; font-weight: 600;">
-                            Great Learning Academy
-                        </span></li>
-                </a>
-                <a href="/images/MERN Stack Certificate.jpg" target="_blank" rel="noopener noreferrer">
-                    <li>MERN - <span
-                            style="background: linear-gradient(90deg, #4caf50, #81c784); padding: 5px 10px; border-radius: 5px; color: white; font-weight: 600;">
-                            Sensation Software Solutions
-                        </span></li>
-                </a>
-            </ul>
-        </div>
-    </div>
+    </main>
     <script src="portfolio.js"></script>
 </body>
 

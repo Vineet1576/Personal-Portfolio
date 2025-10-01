@@ -5,101 +5,153 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>About - Vineet Rana</title>
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="about.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <style>
+        /* Define the primary background */
+        body {
+            background-color: #12181f;
+        }
+
+        /* Custom image styling for the profile picture */
+        .profile-img-container {
+            /* Create a subtle, glowing shadow effect for visual interest */
+            box-shadow: 0 0 20px rgba(52, 211, 255, 0.4);
+        }
+    </style>
 </head>
 
-<body>
-    <nav>
-        <div class="logo">Vineet Rana.</div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+<body class="min-h-screen">
+    <nav class="fixed top-0 left-0 right-0 flex justify-center z-50 transition-all py-4 md:py-6">
+        <div
+            class="max-w-[1200px] w-[95%] mx-auto flex justify-between items-center font-semibold text-white bg-[#1a222b] bg-opacity-90 backdrop-blur-md rounded-full px-4 sm:px-8 py-3 shadow-2xl transition-all">
+            <div class="font-extrabold text-xl sm:text-2xl select-none text-cyan-400">Vineet Rana.</div>
+            <ul class="hidden md:flex gap-6 lg:gap-10 items-center list-none text-sm lg:text-base">
+                <li><a href="index.html" class="hover:text-cyan-400 transition">Home</a></li>
+                <li><a href="about.html" class="hover:text-cyan-400 transition font-bold text-cyan-400">About</a></li>
+                <li><a href="skills.html" class="hover:text-cyan-400 transition">Skills</a></li>
+                <li><a href="portfolio.html" class="hover:text-cyan-400 transition">Portfolio</a></li>
+                <li><a href="contact.html" class="hover:text-cyan-400 transition">Contact</a></li>
+            </ul>
+            <button class="md:hidden text-white text-2xl hover:text-cyan-400 transition"
+                aria-label="Toggle Navigation Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
     </nav>
 
-    <div class="about-container">
-        <h1>About Me</h1>
-        <div class="about-content">
-            <!-- <img src="/Vineet Rana.jpg" alt="Vineet Rana" class="about-image"> -->
-            <div class="about-text">
-                <h2>Hi, I'm Vineet Rana</h2>
+    <main class="pt-32 pb-16">
+        <div class="max-w-[1200px] w-[95%] mx-auto bg-[#1a222b] rounded-3xl shadow-2xl p-8 md:p-12 text-white">
+            <h1
+                class="text-3xl sm:text-4xl font-extrabold text-cyan-400 mb-10 text-center border-b-2 border-cyan-400/50 pb-4">
+                <i class="fas fa-user-circle mr-3"></i> About Me
+            </h1>
 
-                <div class="about">
-                    <h2>Career Objective</h2>
-                    <p>
-                        I am a motivated software learner who likes building real projects. I know the
-                        basics of coding and enjoy improving code, adding features, and testing to help users. I have
-                        learned C, C++, JavaScript, HTML, CSS, and the MERN stack. I built a full‑stack Recipe Finder
-                        Project. I am disciplined, quick to adapt, and work well on teams.
-                    </p>
+            <div class="flex flex-col lg:flex-row items-start gap-10 md:gap-16">
+
+                <div class="w-full lg:w-1/3 flex justify-center lg:justify-start flex-shrink-0">
+                    <div
+                        class="w-48 h-48 rounded-full overflow-hidden border-4 border-cyan-400 transition hover:scale-105 profile-img-container">
+                        <img src="images/vineet-rana.jpg" alt="Vineet Rana Professional Photo"
+                            class="w-full h-full object-cover block"
+                            onerror="this.style.display='none'; this.closest('div').classList.add('bg-cyan-400/20', 'flex', 'items-center', 'justify-center'); this.closest('div').innerHTML = '<i class=\'fas fa-user text-6xl text-cyan-400\'></i>';">
+                    </div>
                 </div>
 
-                <div class="about">
-                    <h2>Featured Project</h2>
-                    <ul>
-                        <h3>Recipe Finder | Full-Stack Web Application (MERN)</h3>
-                        <li>Built a responsive recipe search platform using <strong>React, Express, and MongoDB</strong>.</li>
-                        <li>Implemented search, filter, and save functionalities for recipes based on ingredients,
-                            cuisine, and dietary preferences.</li>
-                        <li>Handled API integration with Axios, state management in React, and secure CRUD operations.
-                        </li>
-                        <li>Designed RESTful endpoints and managed user data with Mongoose.</li>
-                        <li>Ensured a responsive UI for both desktop and mobile views.</li>
-                    </ul>
-                </div>
+                <div class="flex-1 space-y-10">
+                    <h2 class="text-3xl font-extrabold text-white">Hi, I'm Vineet Rana 👋</h2>
 
-                <div class="about">
-                    <h2>Education</h2>
-                    <ul>
-                        <li><strong>Maharaja Agrasen Institute of Management and Technology</strong> — Bachelor of
-                            Computer Applications 3rd Year</li>
-                        <li><strong>Government Senior Secondary School</strong> — 12th</li>
-                        <li><strong>Surindera High School</strong> — 10th</li>
-                    </ul>
-                </div>
+                    <section>
+                        <h3 class="section-heading"><i class="fas fa-bullseye mr-2"></i> Career Objective</h3>
+                        <p class="text-gray-300 leading-relaxed text-base">
+                            I am a motivated **software learner** who likes building real projects. I know the basics of
+                            coding and enjoy improving code, adding features, and testing to help users. I have learned
+                            C, C++, JavaScript, HTML, CSS, and the **MERN stack**. I built a full‑stack Recipe Finder
+                            Project. I am disciplined, quick to adapt, and work well on teams.
+                        </p>
+                    </section>
 
-                <div class="about">
-                    <h2>Internship Experience</h2>
-                    <ul>
-                        <li>Developed and deployed responsive full-stack web applications using MongoDB, Express.js, and
-                            React.js.</li>
-                        <li>Gained experience in RESTful APIs, frontend-backend integration, and database management.
-                        </li>
-                        <li>Collaborated in an agile team environment, enhancing skills in communication, confidence,
-                            teamwork, and time management.</li>
-                        <li><strong>Sensation Software Solutions Mohali</strong> | MERN Stack</li>
-                    </ul>
-                </div>
+                    <section>
+                        <h3 class="section-heading"><i class="fas fa-laptop-code mr-2"></i> Featured Project</h3>
+                        <div class="bg-[#181f29] p-5 rounded-xl border-l-4 border-cyan-400 shadow-lg">
+                            <h4 class="font-bold text-xl text-cyan-400 mb-3">Recipe Finder | Full-Stack Web Application
+                                (MERN)</h4>
+                            <ul class="list-disc pl-5 text-gray-300 space-y-2 text-sm">
+                                <li>Built a responsive recipe search platform using <span
+                                        class="font-bold text-cyan-400">React, Express, and MongoDB</span>.</li>
+                                <li>Implemented search, filter, and save functionalities for recipes based on
+                                    ingredients, cuisine, and dietary preferences.</li>
+                                <li>Handled API integration with Axios, state management in React, and secure CRUD
+                                    operations.</li>
+                                <li>Designed RESTful endpoints and managed user data with Mongoose.</li>
+                                <li>Ensured a responsive UI for both desktop and mobile views.</li>
+                            </ul>
+                            <a href="portfolio.html"
+                                class="inline-block mt-4 text-cyan-400 hover:text-cyan-300 transition font-semibold text-sm">
+                                View Project Details <i class="fas fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </section>
 
-                <div class="about">
-                    <h2>Certification</h2>
-                    <ul>
-                        <li>Internship in “MERN Stack from Sensation Software Solution”</li>
-                    </ul>
-                </div>
+                    <section>
+                        <h3 class="section-heading"><i class="fas fa-briefcase mr-2"></i> Internship Experience</h3>
+                        <div class="bg-[#181f29] p-5 rounded-xl border-l-4 border-gray-500 shadow-lg">
+                            <p class="text-white font-bold text-lg mb-1">MERN Stack Intern</p>
+                            <p class="text-sm text-cyan-400 mb-3">Sensation Software Solutions Mohali</p>
+                            <ul class="list-disc pl-5 text-gray-300 space-y-2 text-sm">
+                                <li>Developed and deployed responsive full-stack web applications using **MongoDB,
+                                    Express.js, and React.js**.</li>
+                                <li>Gained experience in **RESTful APIs**, frontend-backend integration, and database
+                                    management.</li>
+                                <li>Collaborated in an agile team environment, enhancing skills in communication,
+                                    confidence, and teamwork.</li>
+                            </ul>
+                        </div>
+                    </section>
 
-                <div class="about">
-                    <h2>Hobbies & Interests</h2>
-                    <ul class="about-hobbies">
-                        <li><strong>Coding Challenges</strong> — Continuously honing my programming skills</li>
-                        <li><strong>Reading Tech Blogs</strong> — Staying current with industry trends and best practices</li>
-                        <li><strong>Gaming</strong> — Enjoying leisure activities that stimulate creativity and strategic thinking</li>
-                    </ul>
-                </div>
-                <div class="about-social">
-                    <a href="https://linkedin.com/in/vineetrana092005" aria-label="LinkedIn" target="_blank"><i
-                            class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/Vineet1576" aria-label="GitHub" target="_blank"><i
-                            class="fab fa-github"></i></a>
+                    <section>
+                        <h3 class="section-heading"><i class="fas fa-graduation-cap mr-2"></i> Education</h3>
+                        <ul class="list-disc pl-5 text-gray-300 space-y-2 text-base">
+                            <li><span class="font-bold text-white">Maharaja Agrasen Institute of Management and
+                                    Technology</span> — Bachelor of Computer Applications 3rd Year</li>
+                            <li><span class="font-bold text-white">Government Senior Secondary School</span> — 12th</li>
+                            <li><span class="font-bold text-white">Surindera High School</span> — 10th</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3 class="section-heading"><i class="fas fa-heart mr-2"></i> Hobbies & Interests</h3>
+                        <div class="flex flex-wrap gap-4 text-gray-300">
+                            <span class="hobby-tag">
+                                <i class="fas fa-code mr-2"></i> Coding Challenges
+                            </span>
+                            <span class="hobby-tag">
+                                <i class="fas fa-blog mr-2"></i> Reading Tech Blogs
+                            </span>
+                            <span class="hobby-tag">
+                                <i class="fas fa-gamepad mr-2"></i> Gaming
+                            </span>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3 class="section-heading"><i class="fas fa-link mr-2"></i> Connect Online</h3>
+                        <div class="flex gap-4 mt-4" aria-label="Social media links">
+                            <a href="https://linkedin.com/in/vineetrana092005" aria-label="LinkedIn" target="_blank"
+                                class="social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/Vineet1576" aria-label="GitHub" target="_blank"
+                                class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </section>
+
                 </div>
             </div>
         </div>
-    </div>
+    </main>
     <script src="portfolio.js"></script>
 </body>
 

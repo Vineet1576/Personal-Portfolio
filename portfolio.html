@@ -5,86 +5,155 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portfolio - Vineet Rana</title>
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="portfolio.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <style>
+        /* Define the background for the entire page */
+        body {
+            background-color: #12181f;
+            /* A slightly darker primary background */
+        }
+
+        /* A subtle animation for the image hover */
+        .project-img-hover:hover {
+            transform: scale(1.03) rotate(-1deg);
+            box-shadow: 0 10px 25px rgba(52, 211, 255, 0.4);
+        }
+    </style>
 </head>
 
-<body>
-    <nav>
-        <div class="logo">Vineet Rana.</div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li class="active"><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+<body class="min-h-screen">
+    <nav class="fixed top-0 left-0 right-0 flex justify-center z-50 transition-all py-4 md:py-6">
+        <div
+            class="max-w-[1200px] w-[95%] mx-auto flex justify-between items-center font-semibold text-white bg-[#1a222b] bg-opacity-90 backdrop-blur-md rounded-full px-4 sm:px-8 py-3 shadow-2xl transition-all">
+            <div class="font-extrabold text-xl sm:text-2xl select-none text-cyan-400">Vineet Rana.</div>
+            <ul class="hidden md:flex gap-6 lg:gap-10 items-center list-none text-sm lg:text-base">
+                <li><a href="index.html" class="hover:text-cyan-400 transition">Home</a></li>
+                <li><a href="about.html" class="hover:text-cyan-400 transition">About</a></li>
+                <li><a href="skills.html" class="hover:text-cyan-400 transition">Skills</a></li>
+                <li><a href="portfolio.html"
+                        class="hover:text-cyan-400 transition font-bold text-cyan-400">Portfolio</a></li>
+                <li><a href="contact.html" class="hover:text-cyan-400 transition">Contact</a></li>
+            </ul>
+            <button class="md:hidden text-white text-2xl hover:text-cyan-400 transition"
+                aria-label="Toggle Navigation Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
     </nav>
-    <div class="portfolio-container">
-        <h1>My Projects</h1>
-        <div class="projects-list">
-            <div class="project-card">
-                <h3>Personal Portfolio Website</h3>
-                <img src="/images/portfolio.jpg" alt="Portfolio Website Screenshot" class="project-img">
-                <p style="margin-bottom: 14px; line-height: 1.7;">A modern, responsive website built to showcase my
-                    projects, skills, and experience as a developer.</p>
-                <div class="technologies-used">
-                    <strong>Technologies Used:</strong> HTML, CSS, JavaScript
+
+    <main class="pt-32 pb-16">
+        <div class="max-w-[1200px] w-[95%] mx-auto bg-[#1a222b] rounded-3xl shadow-2xl p-8 md:p-12 text-white">
+            <h1
+                class="text-3xl sm:text-4xl font-extrabold text-cyan-400 mb-10 text-center border-b-2 border-cyan-400/50 pb-4">
+                <i class="fas fa-project-diagram mr-3"></i> My Projects
+            </h1>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+
+                <div
+                    class="bg-[#181f29] rounded-2xl shadow-xl p-6 flex flex-col items-center border-t-4 border-cyan-400/50 hover:border-cyan-400 transition duration-300">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-4 text-center">Personal Portfolio Website</h3>
+                    <img src="images/portfolio.jpg" alt="Portfolio Website Screenshot"
+                        class="w-full max-w-sm h-40 object-cover rounded-lg mb-4 shadow-2xl border-2 border-[#222c37] transition duration-500 project-img-hover" />
+                    <p class="text-gray-300 mb-4 leading-relaxed text-center text-sm">A modern, responsive website built
+                        to showcase my projects, skills, and experience as a developer.</p>
+
+                    <div class="flex flex-wrap gap-2 justify-center p-2 mb-4 text-xs font-semibold">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                    </div>
+
+                    <a href="https://github.com/Vineet1576/Personal-Portfolio.git" target="_blank" class="project-btn">
+                        <i class="fab fa-github mr-2"></i> View Code
+                    </a>
                 </div>
-                <div class="project-links-row">
-                    <a href="https://github.com/Vineet1576/Personal-Portfolio.git" class="project-link">View Project</a>
+
+                <div
+                    class="bg-[#181f29] rounded-2xl shadow-xl p-6 flex flex-col items-center border-t-4 border-cyan-400/50 hover:border-cyan-400 transition duration-300">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-4 text-center">Recipe Finder Website</h3>
+                    <img src="images/recipe-finder.png" alt="Recipe Finder Website Screenshot"
+                        class="w-full max-w-sm h-40 object-cover rounded-lg mb-4 shadow-2xl border-2 border-[#222c37] transition duration-500 project-img-hover" />
+                    <p class="text-gray-300 mb-4 leading-relaxed text-center text-sm">A full-stack web application that
+                        helps users discover recipes based on ingredients, using a public API.</p>
+
+                    <div class="flex flex-wrap gap-2 justify-center p-2 mb-4 text-xs font-semibold">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">API Integration</span>
+                    </div>
+
+                    <a href="https://github.com/Vineet1576/Recipe-Finder.git" target="_blank" class="project-btn">
+                        <i class="fab fa-github mr-2"></i> View Code
+                    </a>
                 </div>
-            </div>
-            <div class="project-card">
-                <h3>Recipe Finder Website</h3>
-                <img src="images/recipe-finder.png" alt="Recipe Finder Website Screenshot" class="project-img">
-                <p style="margin-bottom: 14px; line-height: 1.7;">A web application that helps users discover recipes
-                    based on ingredients, using a public API for real-time results.</p>
-                <div class="technologies-used">
-                    <strong>Technologies Used:</strong> React, MongoDB, Express, Node.js, API Integration, CSS
+
+                <div
+                    class="bg-[#181f29] rounded-2xl shadow-xl p-6 flex flex-col items-center border-t-4 border-cyan-400/50 hover:border-cyan-400 transition duration-300">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-4 text-center">To Do List App</h3>
+                    <img src="images/to-do-list.png" alt="Task Manager Screenshot"
+                        class="w-full max-w-sm h-40 object-cover rounded-lg mb-4 shadow-2xl border-2 border-[#222c37] transition duration-500 project-img-hover" />
+                    <p class="text-gray-300 mb-4 leading-relaxed text-center text-sm">A simple and intuitive to-do list
+                        app with **Local Storage** for persistent tasks.</p>
+
+                    <div class="flex flex-wrap gap-2 justify-center p-2 mb-4 text-xs font-semibold">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Local Storage</span>
+                    </div>
+
+                    <a href="#" class="project-btn" aria-disabled="true" title="Link coming soon">
+                        <i class="fas fa-link mr-2"></i> Live Demo (TBD)
+                    </a>
                 </div>
-                <div class="project-links-row">
-                    <a href="https://github.com/Vineet1576/Recipe-Finder.git" class="project-link">View Project</a>
+
+                <div
+                    class="bg-[#181f29] rounded-2xl shadow-xl p-6 flex flex-col items-center border-t-4 border-cyan-400/50 hover:border-cyan-400 transition duration-300">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-4 text-center">E-Commerce Product Page</h3>
+                    <img src="images/e-commerce-products-page.png" alt="E-Commerce Screenshot"
+                        class="w-full max-w-sm h-40 object-cover rounded-lg mb-4 shadow-2xl border-2 border-[#222c37] transition duration-500 project-img-hover" />
+                    <p class="text-gray-300 mb-4 leading-relaxed text-center text-sm">A responsive product page
+                        featuring details, images, and add-to-cart functionality, demonstrating layout skills.</p>
+
+                    <div class="flex flex-wrap gap-2 justify-center p-2 mb-4 text-xs font-semibold">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+
+                    <a href="#" class="project-btn" aria-disabled="true" title="Link coming soon">
+                        <i class="fas fa-link mr-2"></i> Live Demo (TBD)
+                    </a>
                 </div>
-            </div>
-            <div class="project-card">
-                <h3>To Do List</h3>
-                <img src="images/to-do-list.png" alt="Task Manager Screenshot" class="project-img">
-                <p style="margin-bottom: 14px; line-height: 1.7;">A simple and intuitive to-do list app to organize
-                    daily tasks and boost productivity.</p>
-                <div class="technologies-used">
-                    <strong>Technologies Used:</strong> HTML, CSS, JavaScript, Use of Local Storage
+
+                <div
+                    class="bg-[#181f29] rounded-2xl shadow-xl p-6 flex flex-col items-center border-t-4 border-cyan-400/50 hover:border-cyan-400 transition duration-300">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-4 text-center">Tic-Tac-Toe Game</h3>
+                    <img src="images/tic-tac-toe.png" alt="Tic-Tac-Toe Game Screenshot"
+                        class="w-full max-w-sm h-40 object-cover rounded-lg mb-4 shadow-2xl border-2 border-[#222c37] transition duration-500 project-img-hover" />
+                    <p class="text-gray-300 mb-4 leading-relaxed text-center text-sm">A classic game built with
+                        interactive UI and game logic, highlighting DOM manipulation skills.</p>
+
+                    <div class="flex flex-wrap gap-2 justify-center p-2 mb-4 text-xs font-semibold">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">DOM Manipulation</span>
+                    </div>
+
+                    <a href="#" class="project-btn" aria-disabled="true" title="Link coming soon">
+                        <i class="fas fa-link mr-2"></i> Live Demo (TBD)
+                    </a>
                 </div>
-                <div class="project-links-row">
-                    <a href="#" class="project-link">View Project</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <h3>E-Commerce Product Page</h3>
-                <img src="images/e-commerce-products-page.png" alt="E-Commerce Screenshot" class="project-img">
-                <p style="margin-bottom: 14px; line-height: 1.7;">A responsive product page for an e-commerce site,
-                    featuring product details, images, and add-to-cart functionality.</p>
-                <div class="technologies-used">
-                    <strong>Technologies Used:</strong> HTML, CSS, JavaScript, API Integration
-                </div>
-                <div class="project-links-row">
-                    <a href="#" class="project-link">View Project</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <h3>Tic-Tac-Toe</h3>
-                <img src="images/tic-tac-toe.png" alt="Tic-Tac-Toe Game Screenshot" class="project-img">
-                <p style="margin-bottom: 14px; line-height: 1.7;">A classic Tic-Tac-Toe game built with interactive UI
-                    and logic for two players.</p>
-                <div class="technologies-used">
-                    <strong>Technologies Used:</strong> HTML, CSS, JavaScript, Use of DOM Manipulation
-                </div>
-                <div class="project-links-row">
-                    <a href="#" class="project-link">View Project</a>
-                </div>
+
             </div>
         </div>
-    </div>
+    </main>
     <script src="portfolio.js"></script>
 </body>
 
