@@ -44,6 +44,7 @@
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
             background: #06b6d4;
         }
+
         .social-link {
             display: inline-flex;
             align-items: center;
@@ -113,90 +114,66 @@
                 class="text-3xl sm:text-4xl font-extrabold text-cyan-400 mb-10 text-center border-b-2 border-cyan-400/50 pb-4">
                 <i class="fas fa-handshake mr-3"></i> Get In Touch
             </h1>
+            <section class="max-w-5xl mx-auto text-center">
+                <h2 class="text-2xl font-bold text-white mb-8 border-b border-cyan-400/30 pb-3">
+                    My Details
+                </h2>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16">
-
-                <section>
-                    <h2 class="text-2xl font-bold text-white mb-6 border-b border-cyan-400/30 pb-2">
-                        Send a Message
-                    </h2>
-                    <form action="#" method="POST" class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
-                            <input type="text" id="name" name="name" required
-                                class="w-full p-3 rounded-lg bg-[#222c37] text-white border border-[#303f50] form-input-field"
-                                placeholder="Vineet Rana" />
-                        </div>
-
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Your Email</label>
-                            <input type="email" id="email" name="email" required
-                                class="w-full p-3 rounded-lg bg-[#222c37] text-white border border-[#303f50] form-input-field"
-                                placeholder="email@example.com" />
-                        </div>
-
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
-                            <textarea id="message" name="message" rows="5" required
-                                class="w-full p-3 rounded-lg bg-[#222c37] text-white border border-[#303f50] form-input-field"
-                                placeholder="I'm reaching out about a project opportunity..."></textarea>
-                        </div>
-
-                        <button type="submit"
-                            class="w-full bg-cyan-400 text-[#12181f] font-bold text-lg px-6 py-3 rounded-full shadow-lg transition duration-300 hover:bg-cyan-600 hover:shadow-cyan-400/50">
-                            <i class="fas fa-paper-plane mr-2"></i> Send Message
-                        </button>
-                    </form>
-                </section>
-
-                <section>
-                    <h2 class="text-2xl font-bold text-white mb-6 border-b border-cyan-400/30 pb-2">
-                        My Details
-                    </h2>
-
-                    <ul class="space-y-6 text-gray-200 text-lg mb-10 list-none">
-                        <li class="flex items-start">
-                            <i class="fas fa-envelope text-cyan-400 text-xl w-6 mt-1 flex-shrink-0"></i>
-                            <div class="ml-4">
-                                <span class="block font-semibold">Email Address</span>
-                                <a href="mailto:vineetrana1576@gmail.com"
-                                    class="text-sm text-gray-400 hover:text-cyan-400 transition">vineetrana1576@gmail.com</a>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-phone-alt text-cyan-400 text-xl w-6 mt-1 flex-shrink-0"></i>
-                            <div class="ml-4">
-                                <span class="block font-semibold">Phone Number</span>
-                                <a href="tel:+919876543210"
-                                    class="text-sm text-gray-400 hover:text-cyan-400 transition">+91-9876543210</a>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-map-marker-alt text-cyan-400 text-xl w-6 mt-1 flex-shrink-0"></i>
-                            <div class="ml-4">
-                                <span class="block font-semibold">Location</span>
-                                <span class="text-sm text-gray-400">Yamuna Nagar, Haryana, India</span>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <h2 class="text-xl font-bold text-white mb-4 border-b border-cyan-400/30 pb-2">
-                        Connect Online
-                    </h2>
-                    <div class="flex gap-4 justify-start mt-4" aria-label="Social media links">
-                        <a href="https://linkedin.com/in/vineetrana092005" aria-label="LinkedIn" target="_blank"
-                            class="social-link">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/Vineet1576" aria-label="GitHub" target="_blank" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="mailto:vineetrana1576@gmail.com" aria-label="Email" class="social-link">
-                            <i class="fas fa-envelope"></i>
+                <!-- Grid Layout for Details -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-200 text-lg mb-10">
+                    <!-- Email -->
+                    <div
+                        class="flex flex-col items-center bg-gray-800/40 p-6 rounded-2xl shadow-md hover:shadow-cyan-400/20 transition">
+                        <i class="fas fa-envelope text-cyan-400 text-2xl mb-3"></i>
+                        <span class="font-semibold mb-1">Email Address</span>
+                        <a href="mailto:vineetrana1576@gmail.com"
+                            class="text-sm text-gray-400 hover:text-cyan-400 transition">
+                            vineetrana1576@gmail.com
                         </a>
                     </div>
-                </section>
-            </div>
+
+                    <!-- Phone -->
+                    <div
+                        class="flex flex-col items-center bg-gray-800/40 p-6 rounded-2xl shadow-md hover:shadow-cyan-400/20 transition">
+                        <i class="fas fa-phone-alt text-cyan-400 text-2xl mb-3"></i>
+                        <span class="font-semibold mb-1">Phone Number</span>
+                        <a href="tel:+919876543210" class="text-sm text-gray-400 hover:text-cyan-400 transition">
+                            +91-9876543210
+                        </a>
+                    </div>
+
+                    <!-- Location -->
+                    <div
+                        class="flex flex-col items-center bg-gray-800/40 p-6 rounded-2xl shadow-md hover:shadow-cyan-400/20 transition">
+                        <i class="fas fa-map-marker-alt text-cyan-400 text-2xl mb-3"></i>
+                        <span class="font-semibold mb-1">Location</span>
+                        <span class="text-sm text-gray-400">
+                            Yamuna Nagar, Haryana, India
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Social Media Links -->
+                <h2 class="text-xl font-bold text-white mb-4 border-b border-cyan-400/30 pb-2">
+                    Connect Online
+                </h2>
+
+                <div class="flex justify-center gap-6 mt-4" aria-label="Social media links">
+                    <a href="https://linkedin.com/in/vineetrana092005" aria-label="LinkedIn" target="_blank"
+                        class="social-link hover:text-cyan-400 transition">
+                        <i class="fab fa-linkedin-in text-2xl"></i>
+                    </a>
+                    <a href="https://github.com/Vineet1576" aria-label="GitHub" target="_blank"
+                        class="social-link hover:text-cyan-400 transition">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="mailto:vineetrana1576@gmail.com" aria-label="Email"
+                        class="social-link hover:text-cyan-400 transition">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                </div>
+            </section>
+
         </div>
     </main>
     <script src="portfolio.js"></script>
